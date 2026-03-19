@@ -84,7 +84,7 @@ func Parse(argv []string) (Args, error) {
 	}
 
 	if len(fs.Args()) == 0 {
-		return Args{}, ExitError{Code: 2, Err: errors.New("missing input markdown file")}
+		return Args{Mode: ModeHelp}, nil
 	}
 	if len(fs.Args()) > 1 {
 		return Args{}, ExitError{Code: 2, Err: fmt.Errorf("expected exactly one input file, got %d", len(fs.Args()))}

@@ -36,6 +36,18 @@ func TestParseHelp(t *testing.T) {
 	}
 }
 
+func TestParseWithoutArgumentsShowsHelp(t *testing.T) {
+	t.Parallel()
+
+	args, err := Parse(nil)
+	if err != nil {
+		t.Fatalf("Parse returned error: %v", err)
+	}
+	if args.Mode != ModeHelp {
+		t.Fatalf("unexpected mode: %v", args.Mode)
+	}
+}
+
 func TestParseVersionRejectsPositionalArguments(t *testing.T) {
 	t.Parallel()
 
