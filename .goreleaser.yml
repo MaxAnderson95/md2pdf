@@ -1,0 +1,48 @@
+project_name: md2pdf
+
+before:
+  hooks:
+    - go mod tidy
+    - go test ./...
+
+builds:
+  - id: md2pdf
+    main: ./cmd/md2pdf
+    binary: md2pdf
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+      - linux
+      - windows
+    goarch:
+      - amd64
+      - arm64
+    ignore:
+      - goos: windows
+        goarch: arm64
+    ldflags:
+      - -s -w -X github.com/maxanderson95/md2pdf/internal/version.Version={{.Version}} -X github.com/maxanderson95/md2pdf/internal/version.Commit={{.Commit}} -X github.com/maxanderson95/md2pdf/internal/version.Date={{.Date}}
+
+archives:
+  - id: default
+    builds:
+      - md2pdf
+    formats:
+      - tar.gz
+    format_overrides:
+      - goos: windows
+        formats:
+          - zip
+
+checksum:
+  name_template: checksums.txt
+
+release:
+  github:
+    owner: maxanderson95
+    name: md2pdf
+  prerelease: auto
+
+changelog:
+  use: github

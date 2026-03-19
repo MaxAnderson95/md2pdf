@@ -1,0 +1,7 @@
+.chroma { background-color: #f6f8fa; color: #24292e; }
+.chroma .k, .chroma .kc, .chroma .kd, .chroma .kn, .chroma .kp, .chroma .kr { color: #cf222e; }
+.chroma .s, .chroma .sa, .chroma .sb, .chroma .sc, .chroma .dl, .chroma .sd, .chroma .s2 { color: #0a3069; }
+.chroma .c, .chroma .ch, .chroma .cm, .chroma .c1, .chroma .cs { color: #6e7781; font-style: italic; }
+.chroma .nf, .chroma .fm { color: #8250df; }
+.chroma .nb, .chroma .nc, .chroma .nn { color: #953800; }
+.chroma .o, .chroma .ow { color: #0550ae; }

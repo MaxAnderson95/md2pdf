@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="240" viewBox="0 0 480 240">
+  <rect width="480" height="240" fill="#f6f8fa" rx="16"/>
+  <rect x="30" y="40" width="180" height="56" fill="#0f766e" rx="10"/>
+  <rect x="270" y="140" width="180" height="56" fill="#0a3069" rx="10"/>
+  <path d="M210 68 C260 68, 220 168, 270 168" stroke="#953800" stroke-width="8" fill="none"/>
+  <text x="120" y="74" font-family="Arial" font-size="24" text-anchor="middle" fill="#fffdf8">Markdown</text>
+  <text x="360" y="174" font-family="Arial" font-size="24" text-anchor="middle" fill="#fffdf8">PDF</text>
+</svg>
