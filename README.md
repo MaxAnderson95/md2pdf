@@ -2,6 +2,10 @@
 
 `md2pdf` is a Go CLI that converts a Markdown file into a PDF with the same basename.
 
+## Installation
+
+Download a pre-compiled binary for your platform from the [latest release](https://github.com/MaxAnderson95/md2pdf/releases/latest), extract it, and place it somewhere on your `PATH`.
+
 ## Usage
 
 ```bash
